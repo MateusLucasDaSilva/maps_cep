@@ -21,4 +21,9 @@ class LocationEntity {
     required this.ddd,
     required this.siafi,
   });
+
+  @override
+  String toString() {
+    return 'LocationEntity(cep: $cep, logradouro: $logradouro, complemento: $complemento, bairro: $bairro, uf: $uf, ibge: $ibge, gia: $gia, ddd: $ddd, siafi: $siafi)';
+  }
 }

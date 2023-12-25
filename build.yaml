@@ -6,8 +6,8 @@ targets:
         generate_for:
           include:
             - lib/data/clients/**.dart
-            - lib/data/data_sources/**_datasource.dart
-            - lib/data/data_sources/**_datasource_impl.dart
+            - lib/data/data_sources/**_data_source.dart
+            - lib/data/data_sources/**_data_source_impl.dart
             - lib/infra/clients/**_client_impl.dart
             - lib/data/repositories/**_repository_impl.dart
             - lib/domain/repositories/**_repository.dart
