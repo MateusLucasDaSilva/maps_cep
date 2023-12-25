@@ -11,8 +11,9 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../data/clients/http/http_client.dart' as _i3;
-import '../data/clients/http/http_client_impl.dart' as _i4;
+import '../data/clients/http/http_client.dart' as _i4;
+import '../data/clients/http/http_client_impl.dart' as _i5;
+import '../presentation/pages/home/controller/home_controller.dart' as _i3;
 
 extension GetItInjectableX on _i1.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -25,7 +26,8 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.HttpClient>(() => _i4.HttpClientImpl());
+    gh.factory<_i3.HomeController>(() => _i3.HomeController());
+    gh.factory<_i4.HttpClient>(() => _i5.HttpClientImpl());
     return this;
   }
 }

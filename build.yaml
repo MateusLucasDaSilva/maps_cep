@@ -26,8 +26,4 @@ targets:
         generate_for:
           include:
             - lib/presentation/**_controller.dart
-
-      hive_generator:
-        generate_for:
-          include:
-            - lib/data/models/**model.dart
+            

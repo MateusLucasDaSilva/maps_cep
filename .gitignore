@@ -10,10 +10,12 @@
 .svn/
 migrate_working_dir/
 
+
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
+*.g.dart
 .idea/
 
 # The .vscode folder contains launch configuration and tasks you configure in

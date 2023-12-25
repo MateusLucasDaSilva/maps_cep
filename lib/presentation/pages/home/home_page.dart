@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('Maps Cep'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -16,11 +16,20 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: <Widget>[
               Container(
-                height: 300,
+                height: 270,
                 width: double.infinity,
-                color: Colors.deepOrange,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(13),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(13),
+                  child: Image.asset(
+                    'assets/images/google_maps.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 20,
