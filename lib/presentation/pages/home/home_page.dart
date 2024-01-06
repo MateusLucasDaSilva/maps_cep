@@ -18,6 +18,10 @@ class _HomePageState extends State<HomePage> {
     _controller.getLocation(int.parse(_cepEditingController.text));
   }
 
+  void getCurrentPosition() {
+    _controller.getCurrentLocation();
+  }
+
   @override
   void dispose() {
     super.dispose();
@@ -39,6 +43,15 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                TextField(
+                  controller: _cepEditingController,
+                  decoration:
+                      const InputDecoration(hintText: ' Ex:..99999-999'),
+                  keyboardType: TextInputType.number,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 Container(
                   height: 270,
                   width: double.infinity,
@@ -56,19 +69,14 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 20,
                 ),
-                TextField(
-                  controller: _cepEditingController,
-                  decoration:
-                      const InputDecoration(hintText: 'Digite o CEP...'),
-                  keyboardType: TextInputType.number,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
                 TextButton(
                     onPressed: _getLocation,
                     child: const Text('Buscar Localização')),
+                TextButton(
+                    onPressed: getCurrentPosition,
+                    child: const Text('Buscar Localização Atual')),
                 Text(_controller.location.toString()),
+                Text(_controller.currentLocation.toString()),
               ],
             ),
           ),

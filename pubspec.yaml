@@ -22,6 +22,7 @@ dependencies:
   injectable: ^2.3.2
   mobx: ^2.2.3+1
   flutter_mobx: ^2.2.0+1
+  geolocator: ^10.1.0
 
 dev_dependencies:
   flutter_test:
