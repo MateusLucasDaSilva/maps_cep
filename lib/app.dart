@@ -10,7 +10,7 @@ class App extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(useMaterial3: true),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
